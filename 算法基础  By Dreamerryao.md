@@ -10,7 +10,15 @@
 
    - 树
 
-     <img src="C:\Users\24479\AppData\Roaming\Typora\typora-user-images\1569770929892.png" alt="1569770929892" style="zoom:50%;" />
+     <img src="../img/1.1.png" style="zoom:50%;" />
+
+     
+
+     
+
+     ![Alt](/img/1.1.png)
+
+     
 
      
 
@@ -18,7 +26,7 @@
 
    - 图
 
-     <img src="C:\Users\24479\AppData\Roaming\Typora\typora-user-images\1569771159313.png" alt="1569771159313" style="zoom:50%;" />
+     ![](/img/1.2.png)
 
      树实际上可以看成图的特殊表示，图包括节点以及其相互关系
 

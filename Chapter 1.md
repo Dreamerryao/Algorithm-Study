@@ -18,7 +18,7 @@
 
   
 
-  ​	node;root;leaf;ancestor(最顶层);father->parent;son->child;subtree;brother
+  ​	node;root;leaf;ancestor(最顶层);father->parent;son->child;subtree;brother;depth;height;
 
 - 图
 
@@ -47,6 +47,8 @@
 
 2. 树
 
+   - 树是保证连通的最小单位，树对应唯一堆栈操作序列。
+
    - 二叉树：**每个结点最多有两个子树**
 
      - 链式存储
@@ -59,7 +61,7 @@
 
    ​				**从根开始，每层自左向右编号为1，2，3**，除了结点1外，每个结点i的父亲是i/2,左儿子是2i，右儿子是2i+1。
 
-   - 一般意义的树：
+   - 一般意义的树：(左儿子右兄弟表示)
 
      - 转化为二叉树存储；**left child-right sibling representation**
 

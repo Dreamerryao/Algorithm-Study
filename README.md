@@ -11,7 +11,8 @@
 - A
 
   1. <a href="PAT A1025.md">PAT A1025. PAT Ranking</a>
-  2. 
+  2. <a href="PAT A1086.md">PAT A1086. Tree Traversals Again</a>
+  3. <a href="PAT A1127.md">PAT A1127. ZigZagging on a Tree</a>
 
 - B
 

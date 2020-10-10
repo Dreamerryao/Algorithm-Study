@@ -6,7 +6,8 @@ A record of learning algorithms by Dreamerryao   ---19/10/3
 
 10.9要冲字节一面 刷刷leetCode和面经，以前的repo捡起来用系列
 
-Edit By Dreamerryao   --- 20/10/1
+对不起丢人了( 这就好好刷算法
+Edit By Dreamerryao   --- 20/10/10
 
 ## 算法基础
 
@@ -36,4 +37,4 @@ Edit By Dreamerryao   --- 20/10/1
 1. <a href = "/CCI 01.md">CCI 01</a>
 2. <a href = "/CCI 02.md">CCI 02</a>
 3. <a href = "/CCI 03.md">CCI 03</a>
-4. 
+

@@ -1,12 +1,19 @@
-var CheckPermutation = function(s1, s2) {
-    if(s1.length!==s2.length) return false;
-    s2Arr = s2.split("");
-    // console.log(s2Arr);
+//ex1
+// let a = {},
+//     b = '0',
+//     c = 0;
+// a[b] = 'lala';
+// a[c] = 'lele';
+// console.log(a[b])
 
-    for(i of s1){
-        if(s2Arr.indexOf(i)===-1)return false;
-        else s2Arr.splice(s2Arr.indexOf(i),1);
+// var a = function(){
+//     console.log(this);
+// }
+// new a();
+
+var a={
+    f:function(){
+        console.log(this);
     }
-    return true;
-};
-// CheckPermutation("abc","acb");
+}
+a.f();

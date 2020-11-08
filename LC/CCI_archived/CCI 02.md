@@ -57,3 +57,16 @@ var CheckPermutation = function(s1, s2) {
     return [...s1].sort().join("") === [...s2].sort().join("");
 }
 ```
+
+**思路3** 这上面两个方法都是啥啊(?，在线给你编辑一个T(N)=O(N),S(N)=O(1)的。
+```C++
+    bool CheckPermutation(string s1, string s2) {
+        int ascii[200] = {0};
+        for(char c: s1) ascii[c]++;
+        for(char c: s2) {
+            ascii[c]--;
+            if(ascii[c]<0) return false;
+        }
+        return true;
+    }
+```

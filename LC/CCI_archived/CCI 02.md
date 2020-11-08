@@ -60,13 +60,15 @@ var CheckPermutation = function(s1, s2) {
 
 **思路3** 这上面两个方法都是啥啊(?，在线给你编辑一个T(N)=O(N),S(N)=O(1)的。
 ```C++
-    bool CheckPermutation(string s1, string s2) {
-        int ascii[200] = {0};
-        for(char c: s1) ascii[c]++;
-        for(char c: s2) {
-            ascii[c]--;
-            if(ascii[c]<0) return false;
-        }
-        return true;
+bool CheckPermutation(string s1, string s2) {
+    int ascii[200] = {0};
+    for(char c: s1) ascii[c]++;
+    for(char c: s2) {
+        ascii[c]--;
+        if(ascii[c]<0) return false;
     }
+    for(int n: ascii)
+        if(i) return false;
+    return true;
+}
 ```

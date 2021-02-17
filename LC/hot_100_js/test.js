@@ -1,4 +1,100 @@
+//21.合并两个升序链表
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} l1
+ * @param {ListNode} l2
+ * @return {ListNode}
+ */
+// const mergeTwoLists = (l1,l2)=>{
+    
+//     let nullNode =new ListNode(-1,null);
+//     let res = nullNode;
+//     while(l1&&l2){
+//         if(l1.val < l2.val){
+//             res.next = l1;
+//             l1 = l1.next;
+//         }
+//         else {
+//             res.next = l2;
+//             l2 = l2.next;
+//         }
+//         res = res.next;
+//             res.next = null;
+//     }
+//     if(l1) res.next = l1;
+//     if(l2) res.next = l2;
+//     return nullNode.next;
+// }
 
+
+
+// //20.有效的括号位数
+// /**
+//  * @param {string} s
+//  * @return {boolean}
+//  */
+// var isValid = function(s) {
+//     const dic = ['(',')','{','}','[',']'];
+//     let arr = [];
+//     for(let i = 0;i<s.length;i++){
+//         let index = dic.indexOf(s[i]);
+//         // console.log(index)
+//         if(index%2===0){//左括号入栈
+//             arr.push(s[i]);
+//             // console.log('111')
+//         }
+//         else if(index === -1){
+//             console.error('error!');
+//             // let hh = arr.pop();
+//         }
+//         else{
+//             let hh = arr.pop();
+//             // console.log(hh)
+//             if(dic.indexOf(hh)!==index-1){
+//                 return false;
+//             }
+//         }
+//     }
+    
+//     return arr.length===0?true:false;
+// };
+// isValid('{}()[]')
+
+//19. 删除链表的倒数第 N 个结点
+/**
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
+ */
+/**
+ * @param {ListNode} head
+ * @param {number} n
+ * @return {ListNode}
+ */
+// const removeNthFromEnd = (head,n) =>{
+//     let nullNode = new ListNode(-1,head);
+//     let ptr1=nullNode,ptr2=nullNode;
+//     for(let i = 0;i<=n;i++){
+//         if(ptr1===null){console.log('index error');
+//         break;}
+//         ptr1 = ptr1.next;
+//     }
+//     while(ptr1){
+//         ptr2 = ptr2.next;
+//         ptr1 = ptr1.next;
+//     }
+//     //找到了倒数第n个节点,删除ptr2
+//     ptr2.next = ptr2.next.next;
+//     return nullNode.next;
+// }
 
 //12. 整数转罗马数字
 // const intToRoman = num =>{

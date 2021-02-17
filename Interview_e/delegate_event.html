@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <ul id="parent">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</body>
+<script>
+    //事件委托实际上就是 因为好多元素都有相同的事件，委托给他们的父亲代理
+    //但是这样就有一个后果，parent在事件冒泡时候需要对事件元素做出判断
+    const parent = document.getElementById('parent');
+    function changeColor(){
+        if(this.classList.contains('active')){
+            this.classList.remove('active');
+        }
+        else{
+            this.classList.add('active');
+        }
+    }
+    const matchSeletor = (target,selector) =>{
+        console.log(selector);
+        if(!selector)return false;
+        if(selector[0]==='#'){
+            return target.id === selector.slice(1);
+        }
+        if(selector[0]==='.'){
+            return target.classList.contains(selector.slice(1));
+        }
+        return target.nodeName.toLowerCase() === selector;
+    }
+    const delegate = (parent,selector,type,handle)=>{
+        const eventFn = e=>{
+            console.log(e.target)
+            if(matchSeletor(e.target,selector)){
+                if(handle){
+                    handle.call(e.target,e);
+                }
+            }
+        }
+        parent.addEventListener(type,eventFn);
+    }   
+    delegate(parent,'li','click',changeColor);
+</script>
+</html>

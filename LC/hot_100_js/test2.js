@@ -13,7 +13,6 @@ var numTrees = function(n) {
     }
     return dp[n];
 };
-
 //二叉树中序遍历
 //1.递归
 const inorderTraversal = root=>{
@@ -27,7 +26,6 @@ const inorderTraversal = root=>{
     inOrder(root);
     return res;
 }
-
 //2.非递归
 const inorderTraversal_rec = root =>{
     let res = [];
@@ -80,7 +78,6 @@ var exist = function(board, word) {
     return false;
 };
 
-
 //不同路径! 动态规划hhh
 const uniquePaths = (m,n)=>{
     //dp[m][n] = dp[m][n-1]+dp[m-1][n]
@@ -93,7 +90,6 @@ const uniquePaths = (m,n)=>{
     }
     return dp[m][n];
 }
-
 
 /**
  * @param {number[][]} intervals

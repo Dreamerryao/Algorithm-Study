@@ -37,6 +37,20 @@ function deepClone(obj){
     }
     return newObj;
 }
+
+
+// function deepClone(obj){
+//     if(obj === null)return null;
+//     if(typeof obj !=='object') return obj;
+//     if(obj instanceof Date) return new Date(obj);
+
+//     let newObj = new obj.constructor;
+//     for(let key in obj){
+//         if(!obj.hasOwnProperty(key)) continue;
+//         newObj[key] = deepClone(obj[key]);
+//     }
+//     return newObj;
+// }
 let obj4 = deepClone(obj);
 console.log(obj4);
 console.log(obj4 === obj);

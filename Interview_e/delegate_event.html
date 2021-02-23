@@ -21,7 +21,10 @@
 <script>
     //事件委托实际上就是 因为好多元素都有相同的事件，委托给他们的父亲代理
     //但是这样就有一个后果，parent在事件冒泡时候需要对事件元素做出判断
+
+
     const parent = document.getElementById('parent');
+
     function changeColor(){
         if(this.classList.contains('active')){
             this.classList.remove('active');
@@ -30,28 +33,28 @@
             this.classList.add('active');
         }
     }
+
     const matchSeletor = (target,selector) =>{
-        console.log(selector);
         if(!selector)return false;
-        if(selector[0]==='#'){
-            return target.id === selector.slice(1);
-        }
-        if(selector[0]==='.'){
-            return target.classList.contains(selector.slice(1));
-        }
-        return target.nodeName.toLowerCase() === selector;
+        if(selector[0] === '#')return target.id === selector.slice(1);
+        else if(selector[0] === '.') return target.classList.contains(selector.slice(1));
+        else return target.nodeName.toLowerCase() === selector;
+
+
     }
-    const delegate = (parent,selector,type,handle)=>{
+    const delegate = (parent,selector,type,handleEvent) =>{
         const eventFn = e=>{
-            console.log(e.target)
             if(matchSeletor(e.target,selector)){
-                if(handle){
-                    handle.call(e.target,e);
+                if(typeof handleEvent ==='function'){
+                    handleEvent.call(e.target,e);
                 }
             }
         }
         parent.addEventListener(type,eventFn);
-    }   
+    }
     delegate(parent,'li','click',changeColor);
+
+
+   
 </script>
 </html>

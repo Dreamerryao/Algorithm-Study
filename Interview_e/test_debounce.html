@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        #container {
+            background-color: aqua;
+            width: 100%;
+            height: 500px;
+            line-height: 500px;
+            text-align: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        let cnt = 1;
+        let wow = document.getElementById('container');
+        const mouseMoveHandler = e =>{
+            wow.innerHTML =  cnt++;
+        }
+        // const debounce = (event,wait)=>{
+        //     let time ;
+        //     return ()=>{
+        //         clearTimeout(time);
+        //         time = setTimeout((...args)=>event(...args),wait);
+
+        //     }
+        // }
+        // wow.onmousemove = debounce(mouseMoveHandler,300);
+        wow.onmousemove = mouseMoveHandler;
+    </script>
+</body>
+</html>
